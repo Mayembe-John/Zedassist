@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zambia’s WAFCON Exit: How the Copper Queens Won 2–1 and Still Went Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --surface: #ffffff;
+            --muted: #5b6b85;
+            --accent: #0a2540;
+            --ad-bg: #e3f0ff;
+            --border: #d8dde5;
+        }
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-dark);
+            line-height: 1.75;
+        }
+        .page-wrapper {
+            display: grid;
+            grid-template-columns: minmax(0, 900px) 280px;
+            gap: 24px;
+            padding: 24px;
+            max-width: 1300px;
+            margin: 90px auto 0;
+        }
+        header {
+            grid-column: 1 / -1;
+            padding: 28px 24px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            box-shadow: 0 10px 30px rgba(16, 32, 58, 0.08);
+        }
+        header h1 {
+            margin: 0 0 12px;
+            font-size: clamp(2rem, 2.5vw, 3rem);
+            letter-spacing: -0.03em;
+        }
+        header p {
+            margin: 0;
+            color: var(--muted);
+            font-size: 1rem;
+        }
+        .ad-box,
+        .ad-inline,
+        .side-panel {
+            background: var(--ad-bg);
+            border: 1px dashed var(--border);
+            border-radius: 16px;
+            color: var(--accent);
+            text-align: center;
+            font-weight: 700;
+            min-height: 140px;
+            padding: 16px;
+        }
+        .ad-box {
+            position: sticky;
+            top: 24px;
+            min-height: 320px;
+            padding: 24px 16px;
+        }
+        .side-panel {
+            position: sticky;
+            top: 24px;
+            padding: 16px;
+            display: grid;
+            gap: 16px;
+            text-align: left;
+            color: var(--text-dark);
+            height: fit-content;
+        }
+        .side-panel h3 {
+            font-size: 1.05rem;
+            margin: 0 0 12px;
+            color: var(--accent);
+            font-weight: 700;
+        }
+        .side-story {
+            background: #ffffff;
+            border: 1px solid #eaeaea;
+            border-radius: 16px;
+            padding: 18px 16px;
+            display: block;
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 600;
+            line-height: 1.4;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            margin-bottom: 12px;
+        }
+        .side-story p {
+            margin: 6px 0 0;
+            color: var(--muted);
+            font-size: 0.95rem;
+            font-weight: 400;
+        }
+        .content {
+            background: #ffffff;
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            padding: 32px;
+        }
+        .content h2,
+        .content h3 {
+            color: var(--accent);
+            margin-top: 36px;
+        }
+        .content h2 {
+            font-size: 1.6rem;
+        }
+        .content h3 {
+            font-size: 1.2rem;
+        }
+        .content p {
+            margin: 1.3rem 0;
+        }
+        .image-placeholder {
+            width: 100%;
+            height: 450px;
+            border-radius: 18px;
+            background: #e7edf8;
+            border: 1px solid #c7d3e4;
+            object-fit: cover;
+            display: block;
+        }
+        figure {
+            margin: 32px 0 16px;
+        }
+        figcaption {
+            margin-top: 12px;
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+        .ad-inline {
+            margin: 32px 0;
+            min-height: 120px;
+        }
+        .quote-block {
+            margin: 32px 0;
+            padding: 24px;
+            background: #f1f5fb;
+            border-left: 4px solid var(--accent);
+            border-radius: 16px;
+            color: var(--text);
+        }
+        .quote-block strong {
+            display: block;
+            margin-bottom: 12px;
+            color: var(--accent);
+        }
+        footer {
+            grid-column: 1 / -1;
+            padding: 24px 32px;
+            text-align: center;
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+        @media (max-width: 1080px) {
+            .page-wrapper {
+                grid-template-columns: 1fr;
+            }
+            .ad-box {
+                position: relative;
+                top: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo-container">
+            <div class="logo-icon">Z<span>A</span></div>
+            ZA Tech
+        </a>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">Stories</a></li>
+            <li><a href="#">Categories</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><button class="btn-subscribe">Subscribe</button></li>
+        </ul>
+
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </nav>
+
+    <div class="page-wrapper">
+        <main class="content">
+            <header>
+                <h1>Zambia’s WAFCON Exit: How the Copper Queens Won 2–1 and Still Went Home</h1>
+                <p><em>Six points, the best goal difference in the group — but CAF’s head-to-head rules sent Zambia crashing out.</em></p>
+            </header>
+
+            <p>Zambia’s Copper Queens have suffered a heartbreaking early exit from the 2026 Women’s Africa Cup of Nations (WAFCON) after finishing third in Group C, despite collecting six points and recording the best overall goal difference in the group.</p>
+            <p>The dramatic elimination came after Zambia defeated Malawi 2–1 in their final group match, a result that was not enough to secure a place in the quarter-finals.</p>
+
+            <figure>
+                <img class="image-placeholder" src="/pics/placeholder-1.jpg" alt="WAFCON match placeholder 1">
+                <figcaption>Placeholder 1 — add an image from the Zambia vs Malawi match.</figcaption>
+            </figure>
+
+            <p>The result left Zambia, Malawi and Nigeria all tied on six points, forcing CAF’s head-to-head rules to determine which two teams would advance.</p>
+
+            <section>
+                <h2>Zambia had done almost everything right</h2>
+                <p>Zambia opened the group with a 6–0 win over Egypt and finished with a +6 goal difference, the best of the three tied teams.</p>
+                <p>They then beat Malawi 2–1, but Nigeria also won 6–2 over Egypt, meaning all three teams ended on six points.</p>
+                <p>With CAF using head-to-head records first, Zambia’s strong overall goal difference was ignored.</p>
+
+                <figure>
+                    <img class="image-placeholder" src="/pics/placeholder-2.jpg" alt="WAFCON match placeholder 2">
+                    <figcaption>Placeholder 2 — add an image of the Copper Queens celebrating a goal.</figcaption>
+                </figure>
+            </section>
+
+            <section>
+                <h2>Head-to-head rules cut Zambia out</h2>
+                <p>The mini-table among Zambia, Malawi and Nigeria put all three on three points.</p>
+                <p>CAF then compared goals scored in those head-to-head matches: Malawi 4, Nigeria 3, Zambia 2.</p>
+                <p>That was enough to eliminate Zambia, even though they had the best overall goal difference.</p>
+
+                <figure>
+                    <img class="image-placeholder" src="/pics/placeholder-3.jpg" alt="WAFCON match placeholder 3">
+                    <figcaption>Placeholder 3 — add an image of the decisive Malawi match or post-match reaction.</figcaption>
+                </figure>
+            </section>
+
+            <section>
+                <h2>What it means</h2>
+                <p>Malawi advance as Group C winners and Nigeria join them in the quarter-finals.</p>
+                <p>Zambia leave the tournament with six points, eight goals scored, two conceded and a +6 goal difference — but no place in the knockout stage.</p>
+                <p>Their exit is a painful reminder that in tournament football, the right tiebreaker can matter more than the scoreline.</p>
+            </section>
+        </main>
+
+        <aside class="side-panel">
+            <h3>Other stories</h3>
+            <article class="side-story">
+                <strong>Election day preview</strong>
+                <p>How Zambia's 13 August vote is shaping up.</p>
+            </article>
+            <article class="side-story">
+                <strong>Football news</strong>
+                <p>More coverage of Zambian sporting drama.</p>
+            </article>
+            <article class="side-story">
+                <strong>Campaign updates</strong>
+                <p>Latest developments from parties and polling.</p>
+            </article>
+        </aside>
+
+        <footer>
+            <p>Use these placeholders to add ads and images where needed. Replace the grey boxes with your own visuals and ad content.</p>
+        </footer>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.getElementById('navLinks');
+            nav.classList.toggle('open');
+        }
+    </script>
+</body>
+</html>
