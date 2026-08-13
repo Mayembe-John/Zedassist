@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
         :root {
@@ -21,10 +22,10 @@
         }
         body {
             margin: 0;
-            font-family: 'Inter', sans-serif;
+            font-family: 'Merriweather', serif;
             background-color: var(--bg-color);
             color: var(--text-dark);
-            line-height: 1.75;
+            line-height: 1.5;
         }
         .page-wrapper {
             display: grid;
@@ -123,11 +124,37 @@
             font-size: 1.2rem;
         }
         .content p {
-            margin: 1.3rem 0;
+            margin: 1rem 0;
+            font-size: 0.95rem;
+            letter-spacing: 0.01em;
+        }
+        .content h1,
+        .content h2,
+        .content h3 {
+            font-family: 'Merriweather', serif;
+        }
+        .content h2 {
+            font-size: 1.45rem;
+        }
+        .content h3 {
+            font-size: 1.1rem;
+        }
+        .content article {
+            columns: 2;
+            column-gap: 40px;
+            column-rule: 1px solid #e0e4ed;
+            font-size: 0.97rem;
+        }
+        .content article p,
+        .content article ul {
+            margin: 0 0 1rem;
+        }
+        .content article ul {
+            padding-left: 1.2rem;
         }
         .image-placeholder {
             width: 100%;
-            height: 450px;
+            height: 320px;
             border-radius: 18px;
             background: #e7edf8;
             border: 1px solid #c7d3e4;
@@ -169,6 +196,20 @@
         @media (max-width: 1080px) {
             .page-wrapper {
                 grid-template-columns: 1fr;
+            }
+            .content article {
+                columns: 1;
+                column-gap: 0;
+                column-rule: none;
+            }
+            .content p {
+                font-size: 0.9rem;
+            }
+            .hero h1,
+            .content h1,
+            .content h2,
+            .content h3 {
+                line-height: 1.2;
             }
             .ad-box {
                 position: relative;

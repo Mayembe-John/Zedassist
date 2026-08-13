@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Insights & Stories</title>
+    <title>ZA | Stories Archive</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
@@ -11,17 +11,15 @@
     <link rel="icon" type="image/svg+xml" href="logo.svg">
 </head>
 <body>
-
-    <!-- SLICK MENU -->
     <nav class="navbar">
-        <a href="#" class="logo-container">
+        <a href="index.html" class="logo-container">
             <img src="logo.svg" alt="ZA" class="logo-img">
             <span class="logo-text">Zed Assist</span>
         </a>
 
         <ul class="nav-links" id="navLinks">
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="stories.html">Stories</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="stories.html" class="active">Stories</a></li>
             <li><a href="#">Categories</a></li>
             <li><a href="#">About</a></li>
             <li><a href="contact.html">Contact</a></li>
@@ -35,49 +33,42 @@
         </div>
     </nav>
 
-    <!-- HERO -->
-    <section class="hero">
-        <h1>Modern <span>Stories</span> for the <br>Digital Age</h1>
-        <p>Insights, tech guides, and deep dives to keep you ahead of the curve. Zed Assist is your new home for innovation.</p>
-        <button class="btn-subscribe btn-subscribe-green" style="padding: 14px 36px; font-size: 1.05rem;">Start Reading</button>
+    <section class="hero" style="min-height: 70vh; padding-top: 100px;">
+        <h1>Your Story Archive</h1>
+        <p>Collect every insight, update, news piece and deep dive in one place. Add new entries here as you publish.</p>
+        <button class="btn-subscribe btn-subscribe-green" style="padding: 14px 36px; font-size: 1.05rem; margin-top: 10px;">Write a New Story</button>
     </section>
 
-    
-
-    <!-- BLOG GRID / STORIES -->
     <section class="blog-section">
         <div class="section-header">
-            <h2>Latest Stories</h2>
-            <a href="#" style="color: var(--navy); font-weight: 600; text-decoration: none;">View All &rarr;</a>
+            <h2>All Stories</h2>
+            <a href="#" style="color: var(--navy); font-weight: 600; text-decoration: none;">Sort by newest &rarr;</a>
         </div>
 
         <div class="blog-grid">
-            <!-- Card 1 -->
             <article class="blog-card">
                 <div class="card-image">
-                    <img src="/pics/pic6.webp" alt="Story image 1">
+                    <img src="pics/pic6.webp" alt="WAFCON story image">
                 </div>
                 <span class="tag">Sports</span>
                 <h3>Zambia’s WAFCON Exit: How the Copper Queens Won 2–1 and Still Went Home</h3>
-                <p>Six points, the best goal difference in the group but CAF’s head-to-head rules sent Zambia crashing out</p>
+                <p>Six points, the best goal difference in the group but CAF’s head-to-head rules sent Zambia crashing out.</p>
                 <a href="wafcon-exit.html">Read Article &rarr;</a>
             </article>
 
-            <!-- Card 2 -->
             <article class="blog-card">
                 <div class="card-image">
-                    <img src="/pics/pic5.jpg" alt="Story image 2">
+                    <img src="pics/pic5.jpg" alt="Brian Mundubile story image">
                 </div>
                 <span class="tag">Politics</span>
                 <h3>Brian Mundubile: From Mporokoso MP to Presidential Contender</h3>
                 <p>Tracing the political journey of the lawyer, former Justice Minister and opposition leader whose career has followed Zambia's changing political landscape.</p>
-                <a href="election-day.html">Read Article &rarr;</a>
+                <a href="#">Read Article &rarr;</a>
             </article>
 
-            <!-- Card 3 -->
             <article class="blog-card">
                 <div class="card-image">
-                    <img src="/pics/pic9.jpg" alt="Story image 3">
+                    <img src="pics/pic9.jpg" alt="Election Day story image">
                 </div>
                 <span class="tag">Politics</span>
                 <h3>13 August: The Day of the Voter Zambia Prepares for Election Day as Government and Opposition Mobilise</h3>
@@ -85,13 +76,40 @@
                 <a href="election-day.html">Read Article &rarr;</a>
             </article>
         </div>
+
+        <div class="section-header" style="margin-top: 60px;">
+            <h2>Drafts & Notes</h2>
+            <span style="color: #666; font-size: 0.95rem;">Keep ideas here until they're ready to publish.</span>
+        </div>
+
+        <div class="blog-grid">
+            <article class="blog-card">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1170&auto=format&fit=crop" alt="Draft note image">
+                </div>
+                <span class="tag">Draft</span>
+                <h3>Story ideas and outlines</h3>
+                <p>Store your working titles, notes, and research points so every entry is easy to revisit when you're ready to write.</p>
+                <a href="#">Open Draft &rarr;</a>
+            </article>
+
+            <article class="blog-card">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=1170&auto=format&fit=crop" alt="Content planning image">
+                </div>
+                <span class="tag">Planning</span>
+                <h3>Content calendar and themes</h3>
+                <p>Track story themes, deadlines, and formats so every future post fits your strategy.</p>
+                <a href="#">Plan Next &rarr;</a>
+            </article>
+        </div>
     </section>
+
     <footer class="site-footer">
         <p>Website was designed by <strong>JM Web Designs</strong></p>
     </footer>
 
     <script>
-        // Simple mobile menu toggle
         function toggleMenu() {
             const nav = document.getElementById('navLinks');
             nav.classList.toggle('open');

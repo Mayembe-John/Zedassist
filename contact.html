@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZA | Contact</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="logo.svg">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo-container">
+            <img src="logo.svg" alt="ZA" class="logo-img">
+            <span class="logo-text">Zed Assist</span>
+        </a>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="stories.html">Stories</a></li>
+            <li><a href="#">Categories</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+            <li><button class="btn-subscribe">Subscribe</button></li>
+        </ul>
+
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </nav>
+
+    <section class="page-intro" style="margin-top: 140px;">
+        <div class="page-summary">
+            <div>
+                <h1>Contact Zed Assist</h1>
+                <p>Have a question, collaboration idea, or story pitch? Reach out and let us know how we can help.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="blog-section">
+        <div class="contact-grid">
+            <div class="contact-card">
+                <h2>Get in Touch</h2>
+                <p>Drop a message anytime and we’ll respond as soon as possible.</p>
+                <div class="contact-info">
+                    <p><strong>Email</strong><br><a href="mailto:hello@zedassist.com">hello@zedassist.com</a></p>
+                    <p><strong>Phone</strong><br><a href="tel:+260123456789">+260 123 456 789</a></p>
+                    <p><strong>Office</strong><br>Lusaka, Zambia</p>
+                </div>
+            </div>
+
+            <form class="contact-form">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your name">
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Your email">
+
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" placeholder="Message subject">
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="6" placeholder="Write your message here..."></textarea>
+
+                <button type="submit" class="btn-subscribe btn-subscribe-green">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <p>Website was designed by <strong>JM Web Designs</strong></p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.getElementById('navLinks');
+            nav.classList.toggle('open');
+        }
+    </script>
+</body>
+</html>

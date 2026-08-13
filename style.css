@@ -50,24 +50,22 @@
         .logo-container {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 14px;
             text-decoration: none;
             color: var(--navy);
             font-weight: 700;
-            font-size: 1.4rem;
+            font-size: 1.2rem;
             letter-spacing: -0.5px;
         }
 
-        /* Mock Logo representing the 'ZA' from your image */
-        .logo-icon {
-            display: flex;
-            font-weight: 800;
-            font-size: 1.6rem;
-            color: var(--navy);
-            position: relative;
+        .logo-img {
+            width: 42px;
+            height: 42px;
+            display: block;
         }
-        .logo-icon span {
-            color: var(--green);
+
+        .logo-text {
+            font-size: 1.25rem;
         }
 
         .nav-links {
@@ -163,14 +161,51 @@
             text-align: center;
             padding: 0 20px;
             margin-top: -20px; /* Offset navbar */
-            background: linear-gradient(180deg, rgba(10, 37, 64, 0.72), rgba(10, 37, 64, 0.4)), url('https://images.unsplash.com/photo-1639720091626-e8bad0008e23?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            background: linear-gradient(180deg, rgba(10, 37, 64, 0.72), rgba(10, 37, 64, 0.4)), url('https://images.unsplash.com/photo-1639720091626-e8bad0008e23?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fDB8fA%3D%3D');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
             color: #fff;
+            box-shadow: inset 0 -60px 80px rgba(10, 37, 64, 0.55), 0 24px 80px rgba(10, 37, 64, 0.18);
         }
 
-        .hero h1 {
+        .hero-divider {
+            max-width: 960px;
+            margin: -55px auto 0;
+            padding: 0 20px;
+            display: flex;
+            justify-content: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .divider-card {
+            background: rgba(255, 255, 255, 0.95);
+            border: 1px solid rgba(10, 37, 64, 0.08);
+            border-radius: 999px;
+            padding: 16px 28px;
+            box-shadow: 0 18px 45px rgba(10, 37, 64, 0.14);
+            backdrop-filter: blur(14px);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .divider-card p {
+            color: var(--navy);
+            font-size: 0.97rem;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            margin: 0;
+        }
+
+        .blog-section {
+            max-width: 1200px;
+            margin: 0 auto 100px;
+            padding: 80px 20px 0;
+        }
+
+        .section-header {
             font-size: 3.5rem;
             font-weight: 700;
             color: #fff;
@@ -206,10 +241,37 @@
         }
 
         /* --- BLOG GRID (Stories) --- */
+        .page-intro {
+            max-width: 1200px;
+            margin: 140px auto 20px;
+            padding: 0 20px;
+        }
+
+        .page-summary {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .page-summary h1 {
+            font-size: 3rem;
+            margin-bottom: 12px;
+            color: var(--navy);
+        }
+
+        .page-summary p {
+            max-width: 660px;
+            color: #5a6474;
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
         .blog-section {
             max-width: 1200px;
             margin: 0 auto 100px;
-            padding: 0 20px;
+            padding: 20px;
         }
 
         .section-header {
@@ -219,6 +281,81 @@
             margin-bottom: 40px;
             border-bottom: 2px solid #e0e0e0;
             padding-bottom: 20px;
+        }
+
+        .top-story-grid {
+            grid-template-columns: repeat(2, minmax(320px, 1fr));
+        }
+
+        .featured-card {
+            padding: 28px;
+        }
+
+        .write-news-section {
+            display: grid;
+            grid-template-columns: 1.25fr 1fr;
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .write-panel,
+        .news-panel {
+            background: #fff;
+            border-radius: 24px;
+            padding: 32px;
+            border: 1px solid #edf2f7;
+            box-shadow: 0 18px 45px rgba(10, 37, 64, 0.08);
+        }
+
+        .write-panel h2,
+        .news-panel h2 {
+            margin-bottom: 18px;
+            font-size: 1.9rem;
+        }
+
+        .write-panel p {
+            color: #5a6474;
+            font-size: 1rem;
+            margin-bottom: 24px;
+            line-height: 1.7;
+        }
+
+        .news-list {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            margin-top: 10px;
+        }
+
+        .news-item {
+            border: 1px solid #e2e8f0;
+            border-radius: 18px;
+            padding: 20px;
+            background: #fbfcfe;
+            transition: transform 0.25s ease, border-color 0.25s ease;
+        }
+
+        .news-item:hover {
+            transform: translateY(-2px);
+            border-color: var(--green);
+        }
+
+        .news-item h3 {
+            margin: 0 0 10px;
+            font-size: 1.05rem;
+            color: var(--navy);
+        }
+
+        .news-item p {
+            margin: 0;
+            color: #5a6474;
+            line-height: 1.6;
+        }
+
+        .no-border {
+            border-bottom: none;
+            padding-bottom: 0;
+            margin-bottom: 0;
         }
 
         .section-header h2 {
